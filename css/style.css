@@ -1,0 +1,231 @@
+﻿    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+    }
+    
+    @font-face {
+        font-family: 'BRoya';
+        src: url('../fonts/BRoya.eot?#') format('eot'), /* IE6-8 */
+        url('../fonts/BRoya.woff') format('woff'), /* FF3.6+, IE9, Chrom6+, Saf5.1+*/
+        url('../fonts/BRoya.ttf') format('truetype');
+        /* Saf3-5, Chrome4, FF3.5, Opera 10+ */
+    }
+    
+    body {
+        font-family: BRoya;
+        font-size: 16px;
+        background-color: #dfdfdf;
+    }
+    
+    h1 {
+        color: black;
+    }
+    
+    a:link,
+    a:visited {
+        background-color: rgba(82, 80, 81, 0.13);
+        color: black;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 50%;
+    }
+    
+    a:hover {
+        background-color: rgba(82, 80, 81, 0.555);
+    }
+    
+    .fa-paper-plane {
+        color: #41AAA8;
+        background-color: white;
+    }
+    
+    .fa-paper-plane:hover {
+        color: #30E3CA;
+    }
+    
+    .box {
+        direction: rtl;
+        display: block;
+        border-radius: 20px;
+        width: 800px;
+        height: 600px;
+        padding: 30px 50px;
+        background-color: white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+        color: rgb(102, 102, 102);
+    }
+    /* Rotate animation for some texts*/
+    
+    .box.present .animation-rotate {
+        display: inline-block;
+        transform: rotate(-5deg);
+        transition: 0.5s;
+        transition-delay: 0.25s;
+    }
+    
+    .box.present .myanimation {
+        display: inline-block;
+        transform: rotate(360deg);
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+    
+    .subject {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 70px;
+        color: black;
+    }
+    
+    .profName {
+        padding-top: 100px;
+        color: black;
+        text-align: center;
+    }
+    
+    .myName {
+        color: black;
+        text-align: center;
+    }
+    
+    .para {
+        font-size: 28px;
+        margin: 50px;
+        color: black;
+    }
+    
+    .para3 {
+        font-size: 23px;
+        margin: 65px;
+        color: black;
+    }
+    
+    .borderIMG {
+        position: absolute;
+        top: 230px;
+        right: 400px;
+    }
+    
+    .firstImg {
+        border-radius: 20%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .img2 {
+        width: 41%;
+        height: 29%;
+        border-radius: 10px 100px / 120px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .img5 {
+        width: 70%;
+        height: 60%;
+        border-radius: 5%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .imgs12 {
+        height: 250px;
+        width: 300px;
+        border-radius: 100%;
+        float: left;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .imgs13 {
+        width: 85%;
+        height: 20%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .sourceImg {
+        width: 140px;
+        height: 170px;
+        float: left;
+    }
+    
+    .thinkingImg {
+        display: block;
+        margin: 0 auto;
+        height: 320px;
+        width: 240px;
+        float: left;
+    }
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 45px;
+    }
+    
+    .overviewIMG {
+        width: 55%;
+        height: 45%;
+        padding-top: 20px;
+        display: block;
+        float: left;
+        border-radius: 10% / 50%;
+        ;
+    }
+    
+    .fa-grin-squint {
+        color: #F12D2D;
+    }
+    /* CSS impress.js */
+    
+    .impress-on-overview .step {
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    .impress-enabled div#impress-toolbar {
+        position: fixed;
+        right: 1px;
+        bottom: 1px;
+        opacity: 0.6;
+    }
+    
+    .impress-enabled div#impress-toolbar>span {
+        margin-right: 10px;
+    }
+    
+    body.impress-mouse-timeout div#impress-toolbar {
+        display: none;
+    }
+    
+    body.impress-mouse-timeout {
+        cursor: none;
+    }
+    /* Toolbar plugin */
+    
+    .impress-enabled div#impress-toolbar {
+        position: fixed;
+        right: 1px;
+        bottom: 1px;
+        opacity: 0.6;
+        z-index: 10;
+    }
+    
+    .impress-enabled div#impress-toolbar>span {
+        margin-right: 10px;
+    }
+    
+    .impress-enabled div#impress-toolbar.impress-toolbar-show {
+        display: block;
+    }
+    
+    .impress-enabled div#impress-toolbar.impress-toolbar-hide {
+        display: none;
+    }
