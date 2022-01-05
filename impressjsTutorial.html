@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js tutorial</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background: #b2ad7f;
+        }
+        
+        form {
+            overflow: hidden;
+            max-width: 240px;
+            margin: 1em;
+            padding: 1em;
+            background: #f9f9f9;
+            border: 1px solid #c1c1c1;
+            border-radius: 5px;
+            font-family: sans-serif;
+        }
+        
+        label {
+            float: left;
+            width: 120px;
+            padding: 0.5em 1.5em 0.5em 0;
+            text-align: right;
+        }
+        
+        form input {
+            margin-bottom: 1em;
+            background: #fff;
+            border: 1px solid #9c9c9c;
+        }
+        
+        input {
+            float: left;
+            width: calc(100% - 120px);
+            padding: 0.7em;
+            margin-bottom: 0.5em;
+        }
+        
+        input:focus {
+            outline: 3px solid gold;
+        }
+        
+        #lab_obj {
+            width: 100px;
+            height: 50px;
+            padding: 1em;
+            text-align: center;
+            background-color: #f5e23d;
+            transform: translate3d(500px, -250px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(2);
+            transform-style: preserve-3d;
+            transition: transform 1.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="lab">
+        <form name="labForm">
+            <label for="lab-data-x">data-x:</label>
+            <input id="lab-data-x" type="text" onchange="obj_tr()" value="0">
+            <label for="lab-data-y">data-y:</label>
+            <input id="lab-data-y" type="text" onchange="obj_tr()" value="0">
+            <label for="lab-data-z">data-z:</label>
+            <input id="lab-data-z" type="text" onchange="obj_tr()" value="0">
+            <label for="lab-data-r-z">data-rotate-z:</label>
+            <input id="lab-data-r-z" type="text" onchange="obj_tr()" value="0">
+            <label for="lab-data-r-x">data-rotate-x:</label>
+            <input id="lab-data-r-x" type="text" onchange="obj_tr()" value="0">
+            <label for="lab-data-r-y">data-rotate-y:</label>
+            <input id="lab-data-r-y" type="text" onchange="obj_tr()" value="0">
+            <label for="lab-data-scale">data-scale:</label>
+            <input id="lab-data-scale" type="text" onchange="obj_tr()" value="2">
+        </form>
+        <div id="lab_obj">Hello!</div>
+    </div>
+
+    <script>
+        function obj_tr() {
+            var data_x = parseInt(document.forms["labForm"]["lab-data-x"].value) + 500;
+            var data_y = parseInt(document.forms["labForm"]["lab-data-y"].value) - 250;
+            var data_z = parseInt(document.forms["labForm"]["lab-data-z"].value);
+
+            var data_r_z = document.forms["labForm"]["lab-data-r-z"].value;
+            var data_r_x = document.forms["labForm"]["lab-data-r-x"].value;
+            var data_r_y = document.forms["labForm"]["lab-data-r-y"].value;
+
+            var data_scale = document.forms["labForm"]["lab-data-scale"].value;
+
+            var tr = "translate3d(" + data_x + "px, " + data_y + "px, " +
+                data_z + "px) rotateX(" + data_r_x + "deg) rotateY(" +
+                data_r_y + "deg) rotateZ(" + data_r_z + "deg) scale(" +
+                data_scale + ")";
+
+            document.getElementById("lab_obj").style.transform = tr;
+        }
+    </script>
+
+</body>
+
+</html>
